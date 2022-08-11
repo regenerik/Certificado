@@ -1,0 +1,172 @@
+.composicionTotal{
+    position:relative;
+    margin-top: 2vh;
+    /* border-color: rgb(0, 0, 0); */
+    border: solid black 2px;
+    /* border-radius: 0.5vh; */
+    width: 100%;
+    height: 53.5vw;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    right: 3vh;
+}
+
+.background1{
+max-width: 99%;
+max-height: 99%;
+}
+
+.topCertificado{
+    top: 17%;
+
+    max-width: 100%;
+    position: absolute;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 185%;
+}
+
+.footerCertificado{
+    top: 75%;
+    max-width: 100%;
+    position: absolute;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    font-size: 200%;
+    gap:30vw;
+}
+
+.titulo{
+    font-size: 75%;
+    margin-bottom: 38px;
+}
+.texto{
+    margin: 40px 0px 42px;
+}
+.nombre{
+    font-family: "Vladimir Script";
+    font-size: 80px;
+}
+.ciudadPaisFecha{
+    position: relative;
+    height: auto;
+    gap:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fecha{
+margin: 0;
+}
+.ciudad{
+margin: 0;
+}
+.responsable{
+    background-color: white;
+    border:solid black 1px;
+    padding: 0;
+}
+.responsable2{
+    margin: 1vh;
+}
+.tipo{
+    margin-bottom: 1vw;
+    margin-top: 0vw;
+}
+
+
+
+@media(max-width:1440px){
+
+    .nombre{
+        font-size: 65px;
+    }
+    .titulo{
+        font-size: 60%;
+    }
+    .footerCertificado{
+        gap:28vh;
+        }
+
+}
+
+@media(max-width:1024px){
+
+    .nombre{
+        font-size: 50px;
+    }
+    .topCertificado{
+        top: 12%;
+    }
+    .footerCertificado{
+    gap:11vh;
+    }
+    .instituto{
+        margin-top: 0;
+    }
+    .texto{
+        margin-top: 20px;
+    }
+    .footerCertificado{
+        font-size: 120%;
+        gap:32vw;
+        max-width: 90%;
+    }
+}
+
+/* ----------------a apartir de aca no me funciona mas el responsive------------------- */
+
+@media(max-width:768px){
+    .titulo{
+        margin-bottom: 40px;
+    }
+    .texto{
+        margin: 20px 0px 42px;
+    }
+    .footerCertificado{
+        background-color: red;
+        font-size: 100%;
+        gap:12vw;
+    }
+
+}
+
+@media(max-width:425px){
+    .footerCertificado{
+        font-size: 90%;
+        gap:2vw;
+        top: 70%;
+    }
+    .ciudadPaisFecha{
+        margin: 0;
+    }
+    .responsable{
+        margin: 0;
+    }
+}
+@media(max-width:375px){
+    .footerCertificado{
+        font-size: 70%;
+        gap:16vw;
+        top: 60%;
+        padding: 0;
+    }
+    .ciudadPaisFecha{
+        margin: 0;
+    }
+    .responsable{
+        margin: 0;
+    }
+}

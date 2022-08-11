@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    color: rgb(212, 255, 212);
+    background-color: rgb(0, 18, 36);
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* ------------GIRD-------------- */
+
+.container > * {
+    padding: 20px;
+    border: 1px solid;
+}
+
+.header{
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    grid-gap: 1vw;
+    min-height: 100vh;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "content"
+    "sidebar"
+    "footer";
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.imagenesMini{
+    gap:2vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.miniBackground{
+    max-width: 15%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    gap:6%;
+}
+
+@media (min-width: 500px){
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .container {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+        "header  header"
+        "navbar     navbar"
+        "content  content "
+        "sidebar sidebar"
+        "footer      footer";
+    }
+
+}
+
+@media (min-width: 700px) {
+    .nav ul {
+        flex-direction: column;
+    }
+    .container {
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 4fr 1fr;
+        grid-template-areas:
+        "header  header"
+        "navbar navbar"
+        "content sidebar"
+        "footer footer";
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
