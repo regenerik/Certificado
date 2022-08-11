@@ -28,7 +28,7 @@ const Padre = () => {
     nombre:"David Ezequiel Cunha Quinteros",
     instituto:"Instituto Inventado",
     fecha:"10/10/2022",
-    ciudad:"Buenos Aires",
+    ciudad:"Bs.As.",
     pais:"Argentina",
     responsable:"Sr. Dueño"
   })

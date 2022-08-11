@@ -16,7 +16,7 @@ const Creador = ({uploaded, back, tipo, texto, titulo, nombre, instituto, fecha,
             const imgHeight = canvas.height * imgWidth / canvas.width;
             const imgData = canvas.toDataURL("img/png");
             // const pdf = new jsPDF("l","mm","a5");
-            const pdf = new jsPDF("l","mm",[145,208]);
+            const pdf = new jsPDF("l","mm",[147,208]);
             pdf.addImage(imgData, "PNG",0,0,imgWidth,imgHeight)
             pdf.save("nombreDelPdf.pdf")
         })
