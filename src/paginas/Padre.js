@@ -14,13 +14,13 @@ const Padre = () => {
   const [ datos , setDatos ] = useState({
     tipo:"Certificado",
     texto:"Este documento respalda que el alumno:",
-    titulo:"ah completado el curso de Desarrollo web",
+    titulo:"completó el curso de armado de barquitos de papel.",
     nombre:"David Ezequiel Cunha Quinteros",
-    instituto:"Henry",
+    instituto:"Instituto Inventado",
     fecha:"10/10/2022",
     ciudad:"Buenos Aires",
     pais:"Argentina",
-    responsable:"Don Henry"
+    responsable:"Sr. Dueño"
   })
 
   const [back , setBack ] = useState("1")
