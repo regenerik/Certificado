@@ -5,7 +5,7 @@
     border: solid black 2px;
     /* border-radius: 0.5vh; */
     width: 100%;
-    height: 53.5vw;
+    height:auto;
     background-size: cover;
     object-fit: cover;
     display: flex;
@@ -95,13 +95,15 @@ margin: 0;
     }
 
     .nombre{
-        font-size: 65px;
+        font-size: 75px;
+        margin-top: 4%;
+        margin-bottom: 4%;
     }
     .titulo{
         font-size: 70%;
     }
     .footerCertificado{
-        gap:28vh;
+        gap:32vh;
         }
     .topCertificado{
         top: 20%;
@@ -148,15 +150,14 @@ margin: 0;
         gap:28vw;
     }
     .topCertificado{
-        top: 14%;
+        top: 11%;
     }
 
 }
 
-@media(max-width:425px){
+@media(min-width:425px){
     .footerCertificado{
         font-size: 90%;
-        background-color: red;
         top: 70%;
     }
     .ciudadPaisFecha{
@@ -165,12 +166,31 @@ margin: 0;
     .responsable{
         margin: 0;
     }
+    .nombre{
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
 }
-@media(max-width:375px){
+@media(min-width:375px){
     .footerCertificado{
         font-size: 70%;
-        gap:16vw;
-        top: 60%;
+        gap:26vw;
+        top: 72%;
+        padding: 0;
+    }
+    .ciudadPaisFecha{
+        margin: 0;
+    }
+    .responsable{
+        margin: 0;
+    }
+}
+
+@media(min-width:320px){
+    .footerCertificado{
+        font-size: 70%;
+        gap:26vw;
+        top: 75%;
         padding: 0;
     }
     .ciudadPaisFecha{
