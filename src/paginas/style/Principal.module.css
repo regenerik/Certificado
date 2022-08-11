@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    color: rgb(191, 250, 191);
-    background-color: rgb(151, 159, 65);
+    color: #31c9c9;
+    background-color: rgb(5, 0, 40);
     font-size: 1em;
+    padding: 2vh;
 }
 
 ul {
@@ -21,8 +22,9 @@ h1 {
 .container > * {
     padding: 20px;
     border: 1px solid;
+    border-color: #124747;
     border-radius: 1vh;
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(40, 40, 40);
 }
 
 .header{
@@ -37,6 +39,16 @@ h1 {
 .navbar{
     grid-area: navbar;
 }
+.listaBotones{
+    margin-left: 4.5%;
+    margin-right: 6%;
+    text-decoration: none;
+}
+.links{
+    text-decoration: none;
+    color: #31c9c9;
+}
+
 
 .sidebar{
     grid-area: sidebar;

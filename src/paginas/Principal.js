@@ -1,19 +1,23 @@
 import React from 'react'
 import style from "./style/Principal.module.css"
 import { Link } from 'react-router-dom'
+import Header from "../componentes/Header.js"
+
 
 
 const Principal = () => {
   return (
     <div className={style.container}>
-      <header className={style.header}>Bienvenido a "Tu Diploma!"</header>
+      <header className={style.header}>
+        <Header />
+      </header>
       <nav className={style.navbar}>
-        <ul>
+        <ul className={style.listaBotones}>
           <Link to="/creando">
-            <li>Crear ya</li>
+            <li className={style.links}>Crear ya</li>
           </Link>
-          <li>Tutorial</li>
-          <li>Quiero donar</li>
+          <li className={style.links}>Tutorial</li>
+          <li className={style.links}>Quiero donar</li>
         </ul>
       </nav>
       <article className={style.content}>

@@ -4,9 +4,9 @@ import background1 from "../img/background1.jpg"
 import background2 from "../img/background2.jpg"
 import background3 from "../img/background3.jpg"
 import background4 from "../img/background4.jpg"
+import background6 from "../img/background6.jpg"
 
-const Composicion = ({back, tipo, texto, titulo, nombre, instituto, fecha, ciudad, pais, responsable}) => {
-
+const Composicion = ({uploaded, back, tipo, texto, titulo, nombre, instituto, fecha, ciudad, pais, responsable}) => {
 
   const renderSwitch = (back) => {
     
@@ -16,9 +16,13 @@ const Composicion = ({back, tipo, texto, titulo, nombre, instituto, fecha, ciuda
       case "2":
         return background2;
       case "3":
-          return background3;
+        return background3;
       case "4":
-          return background4;
+        return background4;
+      case "5":
+        return URL.createObjectURL(uploaded);
+      case "6":
+        return background6;
       default:
         return background1;
     }

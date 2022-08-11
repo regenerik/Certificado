@@ -2,14 +2,24 @@ import React from 'react'
 import style from "./style/Padre.module.css"
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import Header from "../componentes/Header.js"
 import Creador from "../componentes/Creador.js"
 import miniBackground1 from "../img/miniBackground1.jpg"
 import miniBackground2 from "../img/miniBackground2.jpg"
 import miniBackground3 from "../img/miniBackground3.jpg"
 import miniBackground4 from "../img/miniBackground4.jpg"
+import miniBackground6 from "../img/miniBackground6.jpg"
 
 
 const Padre = () => {
+
+    // ---------upload image-----------
+    const [selectedImage, setSelectedImage] = useState(null);
+
+  
+
+
+    // --------------------------------
 
   const [ datos , setDatos ] = useState({
     tipo:"Certificado",
@@ -38,16 +48,23 @@ const Padre = () => {
       [corresponde]:valor})
   }
 
+  const hanlderRemove = () =>{
+    setBack("1")
+    setSelectedImage(null);
+  }
+
   return (
     <div className={style.container}>
-      <header className={style.header}>Vamos a crear!</header>
+      <header className={style.header}>
+        <Header />
+      </header>
       <nav className={style.navbar}>
-        <ul>
+        <ul  className={style.listaBotones}>
           <Link to="/">
-            <li>Principal</li>
+            <li className={style.links}>Principal</li>
           </Link>
-          <li>Tutorial</li>
-          <li>Quiero donar</li>
+          <li className={style.links}>Tutorial</li>
+          <li className={style.links}>Quiero donar</li>
         </ul>
       </nav>
       <article className={style.content}>
@@ -96,12 +113,29 @@ const Padre = () => {
             <div>
               <input type="text" onChange={(e)=>handleChange(e)} value={datos.responsable} placeholder="ej: Director Perez" name="responsable"/>
             </div>
+          <label>Subir fondo personalizado:</label>
+            <div>
+              <input type="file" name="myImage" onChange={(event) => { console.log(event.target.files[0]); setSelectedImage(event.target.files[0]); }}/>
+            </div>
         </div>
+        
 
       </div>
+      {selectedImage && (
+        <div>
+          <img className={style.propiaImagen} alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+        <br />
+        <button onClick={()=>hanlderRemove()}>Remove</button>
+        </div>
+        )}
 
           <h3>Tocá la imagen que te guste:</h3>
-          <div className={style.imagenesMini}> 
+          <div className={style.imagenesMini}>
+            { selectedImage ? (
+              <img onClick={(e)=>handleImage(e)} name="5" className={style.miniBackground} src={URL.createObjectURL(selectedImage)} alt="not fount" />
+            ):  (
+              <img onClick={(e)=>handleImage(e)} name="6" className={style.miniBackground} src={miniBackground6} alt="mini-imagen6"/>
+            )}
             <img onClick={(e)=>handleImage(e)} name="1" className={style.miniBackground} src={miniBackground1} alt="mini-imagen1"/>
             <img onClick={(e)=>handleImage(e)} name="2" className={style.miniBackground} src={miniBackground2} alt="mini-imagen2"/>
             <img onClick={(e)=>handleImage(e)} name="3" className={style.miniBackground} src={miniBackground3} alt="mini-imagen3"/>
@@ -110,7 +144,7 @@ const Padre = () => {
 
 
 
-        <Creador back={back} tipo={datos.tipo} texto={datos.texto} titulo={datos.titulo} nombre={datos.nombre} instituto={datos.instituto} fecha={datos.fecha} ciudad={datos.ciudad} pais={datos.pais} responsable={datos.responsable}/>
+        <Creador uploaded={selectedImage} back={back} tipo={datos.tipo} texto={datos.texto} titulo={datos.titulo} nombre={datos.nombre} instituto={datos.instituto} fecha={datos.fecha} ciudad={datos.ciudad} pais={datos.pais} responsable={datos.responsable}/>
 
 {/* ------------------------------------------------------- */}
       </article>

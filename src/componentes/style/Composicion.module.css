@@ -65,6 +65,7 @@ max-height: 99%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
 .fecha{
@@ -89,29 +90,35 @@ margin: 0;
 
 
 @media(max-width:1440px){
+    .tipo{
+        margin-top: 8%;
+    }
 
     .nombre{
         font-size: 65px;
     }
     .titulo{
-        font-size: 60%;
+        font-size: 70%;
     }
     .footerCertificado{
         gap:28vh;
         }
+    .topCertificado{
+        top: 20%;
+    }
 
 }
 
 @media(max-width:1024px){
+    .tipo{
+        margin-top: 0%;
+    }
 
     .nombre{
         font-size: 50px;
     }
     .topCertificado{
         top: 12%;
-    }
-    .footerCertificado{
-    gap:11vh;
     }
     .instituto{
         margin-top: 0;
@@ -128,7 +135,7 @@ margin: 0;
 
 /* ----------------a apartir de aca no me funciona mas el responsive------------------- */
 
-@media(max-width:768px){
+@media(min-width:768px){
     .titulo{
         margin-bottom: 40px;
     }
@@ -136,9 +143,12 @@ margin: 0;
         margin: 20px 0px 42px;
     }
     .footerCertificado{
-        background-color: red;
+        
         font-size: 100%;
-        gap:12vw;
+        gap:28vw;
+    }
+    .topCertificado{
+        top: 14%;
     }
 
 }
@@ -146,7 +156,7 @@ margin: 0;
 @media(max-width:425px){
     .footerCertificado{
         font-size: 90%;
-        gap:2vw;
+        background-color: red;
         top: 70%;
     }
     .ciudadPaisFecha{

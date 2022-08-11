@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    color: rgb(191, 250, 191);
-    background-color: rgb(151, 159, 65);
+    color: #31c9c9;
+    background-color: rgb(5, 0, 40);
     font-size: 1em;
+    padding: 2vh;
 }
 
 ul {
@@ -21,12 +22,24 @@ h1 {
 .container > * {
     padding: 20px;
     border: 1px solid;
+    border-color: #124747;
     border-radius: 1vh;
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(40, 40, 40);
 }
 
 .header{
     grid-area: header;
+}
+.listaBotones{
+    margin-left: 4.5%;
+    margin-right: 6%;
+    text-decoration: none;
+    margin-top: 0;
+}
+.links{
+    font-size: x-large;
+    text-decoration: none;
+    color: #31c9c9;
 }
 
 .content {
@@ -69,7 +82,10 @@ nav ul {
     align-items: center;
 }
 
-
+.header{
+    /* height: 30%; */
+    margin-bottom: 0;
+}
 
 .imagenesMini{
     gap:2vh;
@@ -89,6 +105,9 @@ nav ul {
     display: flex;
     flex-direction: row;
     gap:6%;
+}
+.propiaImagen{
+    margin-top: 2%;
 }
 
 @media (min-width: 500px){
@@ -119,6 +138,49 @@ nav ul {
         "header  header"
         "navbar navbar"
         "content sidebar"
+        "footer footer";
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1140px) {
+    .nav ul {
+        flex-direction: column;
+    }
+    .container {
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 4fr 1fr;
+        grid-template-areas:
+        "header  header"
+        "navbar navbar"
+        "content sidebar"
+        "footer footer";
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (min-width: 320px) {
+    .nav ul {
+        flex-direction: column;
+    }
+    .container {
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 4fr 1fr;
+        grid-template-areas:
+        "header  header"
+        "navbar navbar"
+        "content content"
+        "sidebar sidebar"
         "footer footer";
     }
     .footer{

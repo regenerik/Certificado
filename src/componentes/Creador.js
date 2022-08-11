@@ -5,7 +5,7 @@ import style from "./style/Creador.module.css"
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-const Creador = ({back, tipo, texto, titulo, nombre, instituto, fecha, ciudad, pais, responsable}) => {
+const Creador = ({uploaded, back, tipo, texto, titulo, nombre, instituto, fecha, ciudad, pais, responsable}) => {
 
   // --------cosas pdf------------
   const  exportPDF = () =>{
@@ -27,7 +27,7 @@ const Creador = ({back, tipo, texto, titulo, nombre, instituto, fecha, ciudad, p
 
   return (
     <div className={style.diplomaYboton}>
-        <Composicion back={back} tipo={tipo} texto={texto} titulo={titulo} nombre={nombre} instituto={instituto} fecha={fecha} ciudad={ciudad} pais={pais} responsable={responsable}/>
+        <Composicion uploaded={uploaded} back={back} tipo={tipo} texto={texto} titulo={titulo} nombre={nombre} instituto={instituto} fecha={fecha} ciudad={ciudad} pais={pais} responsable={responsable}/>
         <button onClick={()=> exportPDF()}>Descargalo</button>
     </div>
   )

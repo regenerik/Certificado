@@ -1,0 +1,34 @@
+.headerTotal{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10%;
+    padding: 0;
+    margin: 0;
+}
+.headerTotal{
+    height: fit-content;
+}
+.headerTotalLogo{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+}
+.imgHeader{
+    max-width: 55%;
+    margin: 0;
+}
+.tituloHeader{
+    font-size: large;
+    margin: 0;
+}
+
+@media(min-width:320px){
+    .headerTotal{
+        height: 100%;
+    }
+}
