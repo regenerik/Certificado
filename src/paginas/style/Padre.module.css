@@ -106,6 +106,9 @@ nav ul {
     flex-direction: row;
     gap:6%;
 }
+.posicion{
+    margin-left: 4.5%;
+}
 .propiaImagen{
     margin-top: 2%;
 }

@@ -9,6 +9,9 @@ import miniBackground2 from "../img/miniBackground2.jpg"
 import miniBackground3 from "../img/miniBackground3.jpg"
 import miniBackground4 from "../img/miniBackground4.jpg"
 import miniBackground6 from "../img/miniBackground6.jpg"
+import Navbar from "../componentes/Navbar.js"
+import Aside from "../componentes/Aside.js"
+import Footer from "../componentes/Footer.js"
 
 
 const Padre = () => {
@@ -59,77 +62,80 @@ const Padre = () => {
         <Header />
       </header>
       <nav className={style.navbar}>
-        <ul  className={style.listaBotones}>
-          <Link to="/">
-            <li className={style.links}>Principal</li>
-          </Link>
-          <li className={style.links}>Tutorial</li>
-          <li className={style.links}>Quiero donar</li>
-        </ul>
+        <Navbar />
       </nav>
       <article className={style.content}>
-        <h1>Area de Creación</h1>
-        <p>Antes que nada llená los campos:</p>
-        {/* --------------Area de creación------------------------- */}
-      
-      <div className={style.formulario}>
-        <div>
-          <label>Tipo de documento:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.tipo} placeholder="ej:Certificado" name="tipo"/>
-            </div>
-          <label>Texto:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.texto} placeholder="ej:`Mediante este docuemento certificamos que X completó el curso de X" name="texto"/>
-            </div>
-          <label>Nombre:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.nombre} placeholder="ej:Pedro Perez" name="nombre"/>
-            </div>
-          <label>Título:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.titulo} placeholder="ej:Maquinista Profesional" name="titulo"/>
-            </div>
-          <label>Instituto:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.instituto} placeholder="ej:Universidad Nacional" name="instituto"/>
-            </div>
-        </div>
 
-        <div>
-          <label>Fecha:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.fecha} placeholder="ej:10/10/2020" name="fecha"/>
-            </div>
-          <label>Ciudad:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.ciudad} placeholder="ej:Buenos Aires" name="ciudad"/>
-            </div>
-          <label>País:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.pais} placeholder="ej:Argentina" name="pais"/>
-            </div>
-          <label>Responsable:</label>
-            <div>
-              <input type="text" onChange={(e)=>handleChange(e)} value={datos.responsable} placeholder="ej: Director Perez" name="responsable"/>
-            </div>
-          <label>Subir fondo personalizado:</label>
-            <div>
-              <input type="file" name="myImage" onChange={(event) => { console.log(event.target.files[0]); setSelectedImage(event.target.files[0]); }}/>
-            </div>
-        </div>
-        
 
-      </div>
-      {selectedImage && (
-        <div>
-          <img className={style.propiaImagen} alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
-        <br />
-        <button onClick={()=>hanlderRemove()}>Remove</button>
-        </div>
-        )}
+          <div className={style.posicion}>
 
-          <h3>Tocá la imagen que te guste:</h3>
+                <h1>Area de Creación</h1>
+                <p>Antes que nada llená los campos:</p>
+                {/* --------------Area de creación------------------------- */}
+              
+              <div className={style.formulario}>
+                <div>
+                  <label>Tipo de documento:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.tipo} placeholder="ej:Certificado" name="tipo"/>
+                    </div>
+                  <label>Texto:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.texto} placeholder="ej:`Mediante este docuemento certificamos que X completó el curso de X" name="texto"/>
+                    </div>
+                  <label>Nombre:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.nombre} placeholder="ej:Pedro Perez" name="nombre"/>
+                    </div>
+                  <label>Título:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.titulo} placeholder="ej:Maquinista Profesional" name="titulo"/>
+                    </div>
+                  <label>Instituto:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.instituto} placeholder="ej:Universidad Nacional" name="instituto"/>
+                    </div>
+                </div>
+
+                <div>
+                  <label>Fecha:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.fecha} placeholder="ej:10/10/2020" name="fecha"/>
+                    </div>
+                  <label>Ciudad:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.ciudad} placeholder="ej:Buenos Aires" name="ciudad"/>
+                    </div>
+                  <label>País:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.pais} placeholder="ej:Argentina" name="pais"/>
+                    </div>
+                  <label>Responsable:</label>
+                    <div>
+                      <input type="text" onChange={(e)=>handleChange(e)} value={datos.responsable} placeholder="ej: Director Perez" name="responsable"/>
+                    </div>
+                  <label>Subir fondo personalizado:</label>
+                    <div>
+                      <input type="file" name="myImage" onChange={(event) => { console.log(event.target.files[0]); setSelectedImage(event.target.files[0]); }}/>
+                    </div>
+                </div>
+                
+
+              </div>
+
+              {selectedImage && (
+                <div>
+                  <img className={style.propiaImagen} alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+                <br />
+                <button onClick={()=>hanlderRemove()}>Remove</button>
+                </div>
+                )}
+
+                  <h3>Tocá la imagen que te guste:</h3>
+
+
+          </div>
+
           <div className={style.imagenesMini}>
             { selectedImage ? (
               <img onClick={(e)=>handleImage(e)} name="5" className={style.miniBackground} src={URL.createObjectURL(selectedImage)} alt="not fount" />
@@ -150,15 +156,10 @@ const Padre = () => {
       </article>
 
       <aside className={style.sidebar}>
-        <h2>Otros trabajos:</h2>
-        <h3>Codebug</h3>
-        <h3>Portfolio</h3>
-        <h3>Canal "Te lo digo en código"</h3>
+        <Aside />
       </aside>
       <footer className={style.footer}>
-        <h4>Contacto</h4>
-        <h4>Acerca del creador</h4>
-        <h4>Términos y condiciones</h4>
+        <Footer />
       </footer>
     </div>
   )

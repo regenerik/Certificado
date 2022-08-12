@@ -1,0 +1,14 @@
+.linkAside{
+    text-decoration: none;
+    color: rgb(0, 222, 222);
+}
+.cajaAside{
+    display: flex;
+    flex-direction: column;
+}
+
+.opcionesAside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

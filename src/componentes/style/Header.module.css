@@ -1,4 +1,5 @@
 .headerTotal{
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -6,11 +7,8 @@
     padding: 0;
     margin: 0;
 }
-.headerTotal{
-    height: fit-content;
-}
 .headerTotalLogo{
-    width: auto;
+    width: 19%;
     height: auto;
     display: flex;
     align-items: center;

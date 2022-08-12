@@ -10,7 +10,7 @@ const Header = () => {
             <h1 className={style.tituloHeader}>MI CERTIFICADO</h1>
         </div>
         <div className={style.textoHeader}>
-            <h1>El sitio que a "Los Simuladores" les hubiese encantado tener</h1>
+            <h1>El sitio para crear tus propios certificados!</h1>
         </div>
     </div>
   )

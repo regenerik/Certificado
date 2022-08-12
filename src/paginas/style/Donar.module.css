@@ -29,7 +29,6 @@ h1 {
 
 .header{
     grid-area: header;
-    /* font-family: "Vladimir Script"; */
 }
 
 .content {
@@ -39,16 +38,6 @@ h1 {
 .navbar{
     grid-area: navbar;
 }
-.listaBotones{
-    margin-left: 4.5%;
-    margin-right: 6%;
-    text-decoration: none;
-}
-.links{
-    text-decoration: none;
-    color: #31c9c9;
-}
-
 
 .sidebar{
     grid-area: sidebar;
@@ -82,20 +71,20 @@ nav ul {
     align-items: center;
 }
 
-.link{
-    width: 89px;
+.linkDonar{
+    width: 77px;
     text-decoration: none
 }
-.boton{
+.botonDonar{
     text-decoration: none;
     background-color: #31c9c9;
-    width: 89px;
+    width: 70px;
     padding: 1vh;
     border-radius: 1vh;
     font-weight: 700;
     color: black;
 }
-.boton:hover{
+.botonDonar:hover{
     text-decoration: none;
     background-color: black;
     width: 89px;
@@ -104,44 +93,6 @@ nav ul {
     font-weight: 700;
     color: #31c9c9;
 }
-/* @media (min-width: 500px){
-    nav ul {
-        display: flex;
-        justify-content: space-between;
-    }
-    .container {
-        grid-template-columns: 3fr 1fr;
-        grid-template-areas:
-        "header  header"
-        "navbar     navbar"
-        "content  content "
-        "sidebar sidebar"
-        "footer      footer";
-    }
-
-}
-
-@media (min-width: 700px) {
-    .nav ul {
-        flex-direction: column;
-    }
-    .container {
-        grid-template-rows: auto auto 1fr;
-        grid-template-columns: 4fr 1fr;
-        grid-template-areas:
-        "header  header"
-        "navbar navbar"
-        "content sidebar"
-        "footer footer";
-    }
-    .footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-}
- */
 
 @media (min-width: 500px){
     nav ul {

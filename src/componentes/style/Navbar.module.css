@@ -1,0 +1,14 @@
+.listaBotones{
+    margin-left: 4.5%;
+    margin-right: 6%;
+    text-decoration: none;
+    margin-top: 0;
+}
+.links{
+    font-size: x-large;
+    text-decoration: none;
+    color: #31c9c9;
+}
+.sinSubrrayado{
+    text-decoration: none;
+}
